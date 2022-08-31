@@ -41,4 +41,3 @@ host ubuntu-node {
 ```
 $ systemctl enable --now dhcpd
 ```
-```
