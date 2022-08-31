@@ -36,7 +36,7 @@ host ubuntu-node {
 	 hardware  ethernet 00:f0:m4:6y:89:0g;
 	 fixed-address 192.168.56.105;
  }
-
+```
 5. start and enable service
 ```
 $ systemctl enable --now dhcpd
