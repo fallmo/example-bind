@@ -66,3 +66,20 @@ $TTL 1W
 7.1.168.192.in-addr.arpa.	IN	PTR	worker1.ocp4.example.com. 
 ;
 ```
+
+4. Add the entries in /etc/named.conf
+```
+zone "example.com" {
+         type master;
+         file "/etc/named/zones/db.example.com";
+};
+
+zone "0.0.127.in-addr.arpa" {
+	type master;
+	file "/etc/named/zones/reverse.example.com";
+};
+```
+5. sstart service
+```
+$ systemctl enable --now named
+```
